@@ -18,5 +18,26 @@ public class ContaTest {
 		
 		assertEquals(SaldoAtual, SaldoEsperado);
 	}
+	
+	@Test
+	public void testPolimorfismo() {
+		//Este flag define qual será a instância da Conta
+		boolean flagContaCorrenteComoDefault = true;
+		
+		Conta conta = null;
+		if(flagContaCorrenteComoDefault) {
+			conta = new ContaCorrente();
+		}else {
+			conta = new ContaPoupanca();
+		}
+		
+		conta.depositar(1000.00); //Sempre é invocado de Conta
+		
+		conta.rentabilizar();// Isso pode ser Invocado de ContaCorrente ou ContaPoupanca
+		// isso é polimorfismo
+		
+		System.out.println(conta.getClass().getName());// qual a distancia
+		System.out.println(conta.saldo);
+	}
 
 }
