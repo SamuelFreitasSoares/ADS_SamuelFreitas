@@ -39,5 +39,16 @@ public class ContaTest {
 		System.out.println(conta.getClass().getName());// qual a distancia
 		System.out.println(conta.saldo);
 	}
+	
+	@Test
+	public void testConta_toString() {
+		Conta conta = new ContaCorrente();
+		conta.depositar(1000.00);
+		conta.sacar(10.00);
+		
+		String str = conta.toString();
+		System.out.println(str);
+		
+	}
 
 }
