@@ -27,6 +27,7 @@ public class Produto {
 		this.dataValidade = dataValidade;
 	}
 	
-	
+	public boolean estaNaValidade() {
+		return false;};	
 
 }
