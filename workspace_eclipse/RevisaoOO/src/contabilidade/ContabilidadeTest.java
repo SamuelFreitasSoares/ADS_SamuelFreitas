@@ -11,8 +11,8 @@ public class ContabilidadeTest {
 		double valorEsperado1 = 275.00;
 		double valorEsperado2 = 0.00;
 		
-		assertEquals(valorEsperado1, e1.getValorIR());
-		assertEquals(valorEsperado2, e1.getValorISS());
+		assertEquals(valorEsperado1, e1.getValorIR(), 2);
+		assertEquals(valorEsperado2, e1.getValorISS(), 2);
 	}
 	
 	@Test
@@ -21,7 +21,7 @@ public class ContabilidadeTest {
 		double valorEsperado1 = 150.00;
 		double valorEsperado2 = 80.00;
 		
-		assertEquals(valorEsperado1, e2.getValorIR());
-		assertEquals(valorEsperado2, e2.getValorISS());
+		assertEquals(valorEsperado1, e2.getValorIR(), 2);
+		assertEquals(valorEsperado2, e2.getValorISS(), 2);
 	}
 }
