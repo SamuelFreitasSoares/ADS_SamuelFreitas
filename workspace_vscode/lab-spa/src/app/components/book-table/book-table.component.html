@@ -22,3 +22,13 @@
     </tr>
   </tbody>
 </table>
+
+<tbody>
+  <ng-container *ngFor="let b of books">
+    <tr>
+      <td>{{ b.id }}</td>
+      <td>{{ b.title }}</td>
+      <td>{{ b.category }}</td>
+    </tr>
+  </ng-container>
+</tbody>
